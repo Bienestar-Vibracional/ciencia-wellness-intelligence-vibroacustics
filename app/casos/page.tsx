@@ -47,6 +47,36 @@ export default function CasesPage() {
         <div className="case-grid">
           <article className="case-card">
             <Image
+              src="/images/casos/krm-respiraciones-gong-2026-10-10.jpeg"
+              alt="Caso grupal KRM con respiraciones conscientes y Gong"
+              width={720}
+              height={437}
+              unoptimized
+            />
+            <div className="case-card-body">
+              <p className="case-meta">10 octubre 2026</p>
+              <h2>KRM</h2>
+              <div className="case-chips">
+                <span className="case-chip">Respiraci&oacute;n + Gong</span>
+                <span className="case-chip">8 participantes</span>
+                <span className="case-chip">WIBindex 1.0</span>
+              </div>
+              <p>
+                Comparativa grupal de estr&eacute;s fisiol&oacute;gico y energ&iacute;a
+                neurofisiol&oacute;gica antes y despu&eacute;s de respiraciones conscientes
+                y Savasana con Gong.
+              </p>
+              <Link
+                className="preview-cta"
+                href="/casos/krm-respiraciones-gong-2026-10-10"
+              >
+                Ver caso <span>&rarr;</span>
+              </Link>
+            </div>
+          </article>
+
+          <article className="case-card">
+            <Image
               src="/images/casos/gf-body-fit-studio-yoga-gong-2026-10-03.jpeg"
               alt="Caso grupal GF BODY FIT STUDIO con Yoga y Gong"
               width={960}
