@@ -46,6 +46,17 @@ export default function CasesPage() {
 
         <div className="case-grid">
           <article className="case-card">
+            <Image src="/images/casos/ananda-el-palomar-gong-2026-10-30.jpeg" alt="Grupo Ananda junto al Gong en El Palomar" width={1086} height={1448} unoptimized />
+            <div className="case-card-body">
+              <p className="case-meta">30 octubre 2026 &middot; El Palomar</p>
+              <h2>Ananda</h2>
+              <div className="case-chips"><span className="case-chip">Gong + Solo Paz</span><span className="case-chip">17 participantes</span><span className="case-chip">WIBindex 1.0</span></div>
+              <p>Comparativa grupal de estr&eacute;s y energ&iacute;a antes y despu&eacute;s de 45 minutos de Gong, con la canci&oacute;n &ldquo;Solo Paz&rdquo; al cierre.</p>
+              <Link className="preview-cta" href="/casos/ananda-el-palomar-2026-10-30">Ver caso <span>&rarr;</span></Link>
+            </div>
+          </article>
+
+          <article className="case-card">
             <Image
               src="/images/casos/krm-respiraciones-gong-2026-10-10.jpeg"
               alt="Caso grupal KRM con respiraciones conscientes y Gong"
