@@ -30,13 +30,23 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
     <NewsHeader />
     <div className="news-wrap news-article-actions"><Link href="/noticias">← Todas las noticias</Link></div>
     <section className="news-wrap news-article-hero">
-      <p className="news-kicker">Brief mensual · {article.date} · {article.reading}</p>
+      <p className="news-kicker">{article.articleLabel ?? "Brief mensual"} · {article.date} · {article.reading}</p>
       <h1>{article.title}</h1>
       <p className="news-dek">{article.dek}</p>
     </section>
     <div className="news-wrap"><Image className="news-cover" src={article.image} alt={article.imageAlt} width={1400} height={700} priority /></div>
     <article className="news-article">
       <p className="news-summary"><strong>Lectura rápida.</strong> {article.summary}</p>
+      {article.stats && <section className="news-infographic" aria-labelledby="infografia-title">
+        <div className="news-infographic-head">
+          <p className="news-kicker">Infografía · WIBindex 1.0</p>
+          <h2 id="infografia-title">Lo que muestran 78 comparaciones</h2>
+          <p>9 casos publicados · mediciones individuales antes y después de experiencias con Gong</p>
+        </div>
+        <div className="news-stat-grid">{article.stats.map((stat) => <div className="news-stat" key={stat.value}>
+          <strong>{stat.value}</strong><span>{stat.count}</span><p>{stat.label}</p>
+        </div>)}</div>
+      </section>}
       {article.campaign && <aside className="news-campaign">
         <p className="news-kicker">{article.campaign.kicker}</p>
         <h2>{article.campaign.title}</h2>
@@ -53,6 +63,14 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
         <p><strong>Implicancia práctica:</strong> {finding.implication}</p>
         <div className="news-links">{finding.links.map((link) => <a className="news-source" href={link.href} target="_blank" rel="noopener noreferrer" key={link.href}>{link.label} ↗</a>)}</div>
       </section>)}
+      {article.gallery && <section className="news-gallery" aria-labelledby="gallery-title">
+        <p className="news-kicker">Registro visual</p>
+        <h2 id="gallery-title">La práctica en imágenes</h2>
+        <div className="news-gallery-grid">{article.gallery.map((item) => <figure key={item.src}>
+          <Image src={item.src} alt={item.alt} width={900} height={650} />
+          <figcaption>{item.caption}</figcaption>
+        </figure>)}</div>
+      </section>}
       <aside className="news-cta">
         <p className="news-kicker">Práctica informada</p>
         <h2>Experimentar, observar e integrar</h2>

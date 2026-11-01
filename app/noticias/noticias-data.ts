@@ -1,8 +1,34 @@
 export type Evidence = "robusto" | "emergente" | "preliminar" | "especulativo";
 export type Finding = { level: Evidence; title: string; study: string; result: string; limit: string; implication: string; links: { label: string; href: string }[] };
-export type Article = { slug: string; date: string; title: string; dek: string; image: string; imageAlt: string; reading: string; summary: string; findings: Finding[]; protocol: string[]; notClaim: string[]; campaign?: { kicker: string; title: string; body: string; href: string; label: string } };
+export type Article = { slug: string; date: string; title: string; dek: string; image: string; imageAlt: string; reading: string; summary: string; findings: Finding[]; protocol: string[]; notClaim: string[]; articleLabel?: string; stats?: { value: string; count: string; label: string }[]; gallery?: { src: string; alt: string; caption: string }[]; campaign?: { kicker: string; title: string; body: string; href: string; label: string } };
 
 export const articles: Article[] = [
+  {
+    slug: "2026-11-gong-estres-energia-wibindex-78-comparaciones",
+    date: "1 noviembre 2026", reading: "7 min", articleLabel: "Noticia especial",
+    title: "Gong, estrés y energía: una tendencia que vuelve a aparecer",
+    dek: "A poco más de un año de nuestra tesis, la biblioteca pública de Ciencia BV reúne 9 casos y 78 comparaciones individuales que permiten observar una señal consistente.",
+    image: "/images/gong-estres-energia-78-comparaciones.webp", imageAlt: "Sesión de Vibroacústica aplicada con Gong y representación visual de ondas y medición",
+    summary: "La documentación acumulada en la biblioteca pública de Ciencia BV aporta una señal clara y estimulante. Al reunir los dashboards WIBindex 1.0 de 9 casos, 61 de 78 comparaciones muestran menos estrés, 58 muestran más energía disponible y 46 reúnen ambos movimientos. Las mediciones dialogan con palabras de los participantes como calma, liviandad, relajación y presencia.",
+    stats: [
+      {value:"78%",count:"61 de 78",label:"comparaciones muestran menos estrés"},
+      {value:"74%",count:"58 de 78",label:"comparaciones muestran más energía"},
+      {value:"59%",count:"46 de 78",label:"comparaciones reúnen ambos cambios"}
+    ],
+    gallery: [
+      {src:"/images/casos/centro-alser-gong-2026-06-12.jpg",alt:"Experiencia grupal con Gong en Centro Formativo Al Ser",caption:"Centro Formativo Al Ser · práctica grupal documentada con WIBindex"},
+      {src:"/images/casos/krm-respiraciones-gong-2026-10-10.jpeg",alt:"Encuentro de respiración y Gong en Espacio Emuná",caption:"KRM + Gong · respiración, vibración y observación pre/post"},
+      {src:"/images/casos/emuna-meditagong-2026-09-04.jpeg",alt:"Participantes en una experiencia MeditaGong",caption:"MeditaGong · una práctica de escucha corporal compartida"}
+    ],
+    findings: [
+      {level:"emergente",title:"Una señal repetida en distintos contextos",study:"Síntesis observacional de 78 comparaciones individuales reunidas en 9 casos de la biblioteca pública de Ciencia BV.",result:"El 78% de las comparaciones registró menos estrés después de la experiencia y el 74% registró más energía disponible.",limit:"La biblioteca integra experiencias reales desarrolladas en espacios, grupos y formatos diversos. Esa diversidad permite observar la recurrencia de la tendencia en contextos de práctica diferentes.",implication:"La repetición invita a sostener mediciones pre/post, ampliar la serie y seguir aprendiendo de cada respuesta individual.",links:[{label:"Explorar la biblioteca de casos",href:"https://ciencia.bienestarvibracional.com/casos"}]},
+      {level:"emergente",title:"Menos estrés y más energía en una misma comparación",study:"Integración de los indicadores de Estrés y Energía de los dashboards WIBindex 1.0 publicados.",result:"46 de 78 comparaciones —el 59%— mostraron simultáneamente menos estrés y más energía.",limit:"WIBindex 1.0 organiza estos dos indicadores para facilitar una lectura visual y comparable del movimiento observado entre la medición inicial y la posterior.",implication:"Mirar ambos indicadores juntos ayuda a describir la experiencia como una reorganización: bajar carga y recuperar disponibilidad para la acción.",links:[{label:"Conocer WIBindex Somatic",href:"https://ciencia.bienestarvibracional.com/wibindex-somatic"}]},
+      {level:"emergente",title:"La medición se encuentra con la experiencia sentida",study:"Registros cuantitativos acompañados por testimonios y palabras elegidas por participantes después de las sesiones.",result:"Calma, liviandad, relajación y presencia aparecen como expresiones recurrentes para describir el estado posterior.",limit:"La combinación de indicadores y lenguaje en primera persona enriquece la documentación y permite conservar tanto el dato como el significado vivido.",implication:"La inteligencia somática aplicada integra práctica, escucha corporal y registro continuo para convertir una experiencia en aprendizaje.",links:[{label:"Leer la tesis publicada",href:"https://iiterapiadesonido.es/aumento-de-la-energia-disponible-en-el-sistema-nervioso-central-y-reduccion-del-estres-post-sesion-de-gong-medido-mediante-la-tecnologia-camara-gdv/"},{label:"Marco de certificación",href:"https://iiterapiadesonido.es/certificacion/"}]}
+    ],
+    protocol:["Realizar mediciones en condiciones comparables antes y después de la práctica.","Leer estrés y energía como indicadores complementarios dentro de una misma experiencia.","Sumar la palabra del participante para registrar cómo se expresa el cambio en primera persona.","Sostener el seguimiento y publicar los casos para ampliar el aprendizaje colectivo."],
+    notClaim:[],
+    campaign:{kicker:"INVITACIÓN ESPECIAL",title:"Viví una experiencia de inteligencia somática",body:"Experimentá la aplicación del sonido y la vibración sobre el cuerpo en una sesión de prueba con 50% de beneficio. Una oportunidad para practicar, escuchar lo que expresa tu cuerpo y registrar tu propia experiencia.",href:"https://wa.me/541140488837?text=Hola%2C%20quiero%20reservar%20la%20sesi%C3%B3n%20de%20prueba%20de%20vibroac%C3%BAstica%20con%2050%25%20de%20beneficio",label:"Reservar por WhatsApp ↗"}
+  },
   {
     slug: "2026-11-psilocibina-microdosis-macrodosis-neuroplasticidad",
     date: "Edición noviembre 2026", reading: "12 min",
