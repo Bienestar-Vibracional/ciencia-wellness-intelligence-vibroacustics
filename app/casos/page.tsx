@@ -46,6 +46,17 @@ export default function CasesPage() {
 
         <div className="case-grid">
           <article className="case-card">
+            <Image src="/images/casos/ikigai-yoga-gong-2026-11-01.jpeg" alt="Grupo de Multiespacio IKIGAI tras Yoga y Gong" width={1200} height={1600} unoptimized />
+            <div className="case-card-body">
+              <p className="case-meta">1 noviembre 2026</p>
+              <h2>Multiespacio IKIGAI</h2>
+              <div className="case-chips"><span className="case-chip">Yoga + Gong</span><span className="case-chip">8 participantes</span><span className="case-chip">WIBindex 1.0</span></div>
+              <p>Vibrando el Coraz&oacute;n: lectura grupal de estr&eacute;s, energ&iacute;a y autoreconocimiento som&aacute;tico antes y despu&eacute;s de la pr&aacute;ctica.</p>
+              <Link className="preview-cta" href="/casos/ikigai-yoga-gong-2026-11-01">Ver caso <span>&rarr;</span></Link>
+            </div>
+          </article>
+
+          <article className="case-card">
             <Image src="/images/casos/ananda-el-palomar-gong-2026-10-30.jpeg" alt="Grupo Ananda junto al Gong en El Palomar" width={1086} height={1448} unoptimized />
             <div className="case-card-body">
               <p className="case-meta">30 octubre 2026 &middot; El Palomar</p>
